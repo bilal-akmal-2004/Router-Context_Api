@@ -1,4 +1,9 @@
 <!-- 404.html -->
 <script>
-  location.replace("/Router-Context_Api/index.html");
+  // Get the path after your repo name and preserve it
+  const redirectTo = location.pathname.replace("/Router-Context_Api", "");
+  // Redirect to index.html with a query param that tells React Router where to go
+  window.location.replace(
+    "/Router-Context_Api/index.html?redirect=" + redirectTo
+  );
 </script>
